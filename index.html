@@ -2,14 +2,126 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Zip-File-Parser</title>
   </head>
+  
+  <style type="text/css">
+	h1 {
+    color: whitesmoke;
+    font-family: courier;
+    font-size: 40%;
+
+	}
+	.form-style-4{
+		width: 700px;
+		font-size: 180px;
+		background: #495C70;
+		padding: 30px 30px 15px 30px;
+		border: 5px solid #53687E;
+	}
+	.form-style-4 input[type=submit],
+	.form-style-4 input[type=button],
+	.form-style-4 input[type=text],
+	.form-style-4 input[type=email],
+	.form-style-4 textarea,
+	.form-style-4 label
+	{
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 16px;
+		color: #fff;
+
+	}
+	.form-style-4 label {
+		display:block;
+		margin-bottom: 10px;
+	}
+	.form-style-4 label > span{
+		display: inline-block;
+		float: left;
+		width: 150px;
+	}
+	.form-style-4 input[type=text],
+	.form-style-4 input[type=email] 
+	{
+		background: transparent;
+		border: none;
+		border-bottom: 1px dashed #83A4C5;
+		width: 425px;
+		outline: none;
+		padding: 0px 0px 0px 0px;
+		font-style: italic;
+	}
+	.form-style-4 textarea{
+		font-style: italic;
+		padding: 0px 0px 0px 0px;
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 1px dashed #83A4C5;
+		width: 325px;
+		overflow: hidden;
+		resize:none;
+		height:20px;
+	}
+
+	.form-style-4 textarea:focus, 
+	.form-style-4 input[type=text]:focus,
+	.form-style-4 input[type=email]:focus,
+	.form-style-4 input[type=email] :focus
+	{
+		border-bottom: 2px dashed #D9FFA9;
+	}
+
+	.form-style-4 input[type=submit],
+	.form-style-4 input[type=button]{
+		background: #576E86;
+		border: none;
+		padding: 8px 10px 8px 10px;
+		border-radius: 5px;
+		color: #A8BACE;
+	}
+	.form-style-4 input[type=submit]:hover,
+	.form-style-4 input[type=button]:hover{
+	background: #394D61;
+	}
+	  
+	.wrapper {
+    	text-align: center;
+	}
+
+	.button {
+		position: absolute;
+		top: 50%;
+	}
+</style>
+  
+  
   <body>
-    <h1>Hello World!</h1>
+
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <form class="form-style-4" action="" method="post">
+    <div class="wrapper">
+    	<h1>File Parser</h1>
+    </div>
+	<label for="field1">
+	
+	
+	<span>Paste Zip File Path: </span><input type="text" name="field1" required="true" />
+	</label>
+	<label>
+	<div class="wrapper">
+		<span>&nbsp;</span><input type="submit" value="Get JSON" />
+	</div>
+	</label>
+	</form>
+    
+    <script type="text/javascript">
+	//auto expand textarea
+	function adjust_textarea(h) {
+		h.style.height = "20px";
+		h.style.height = (h.scrollHeight)+"px";
+	}
+	</script>
 
     <script>
       // You can also require other files to run in this process
